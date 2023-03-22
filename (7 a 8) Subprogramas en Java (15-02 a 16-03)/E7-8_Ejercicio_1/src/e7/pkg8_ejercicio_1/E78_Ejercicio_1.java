@@ -46,7 +46,7 @@ public class E78_Ejercicio_1 {
                 System.out.println(resultado);
                 break;
             case 4:
-                float resu = (float)(div(num1, num2));
+                float resu = (float)(div(num1, num2));//casting o casteo de los argumentos
                 System.out.println(resu);
                 break;
         }
