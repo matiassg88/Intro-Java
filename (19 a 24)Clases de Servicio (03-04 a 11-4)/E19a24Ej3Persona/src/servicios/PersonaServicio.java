@@ -30,6 +30,9 @@ public Persona crearPersona(Persona p){
     do {
         System.out.println("Ingrese el sexo (H)hombre (F)mujer (O)otro:");
         nueva.setSexo(sc.nextLine());
+        if (!nueva.getSexo().equalsIgnoreCase("h")&&!nueva.getSexo().equalsIgnoreCase("f")&&!nueva.getSexo().equalsIgnoreCase("o")) {
+            System.out.println("Ingrese una referencia válida.");
+        }
     } while (!nueva.getSexo().equalsIgnoreCase("h")&&!nueva.getSexo().equalsIgnoreCase("f")&&!nueva.getSexo().equalsIgnoreCase("o"));
     System.out.println("Ingrese el peso (Kg):");
     nueva.setPeso(sc.nextFloat());
@@ -47,10 +50,12 @@ public int calcularIMC (Persona pp){
     if (imc<20) {
         System.out.println("Por debajo del peso ideal.");
         return -1;
-    }else if (imc>=20||imc<=25) {
+    }else if (imc>=20&&imc<=25) {
         System.out.println("En el peso ideal.");
         return 0;
     }else System.out.println("Sobrepeso.");return 1;
 }
-
+public void porcentajes (Persona[] pp){
+    
+}
 }

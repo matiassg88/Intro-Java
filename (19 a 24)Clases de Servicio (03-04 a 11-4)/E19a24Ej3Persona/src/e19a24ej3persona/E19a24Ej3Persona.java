@@ -7,13 +7,12 @@ package e19a24ej3persona;
 import persona_Entidades.Persona;
 import servicios.PersonaServicio;
 
-/**
- *
- * @author Aldana Hereñu
- */
+
 public class E19a24Ej3Persona {
 
         public static void main(String[] args) {
+            int aux=0;
+            int aux2=0;
         PersonaServicio p = new PersonaServicio();
         //crea objeto de tipo persona para pasar por parametro
         Persona pe = new Persona();
@@ -21,14 +20,25 @@ public class E19a24Ej3Persona {
         Persona pp[] = new Persona[4];
         for (int i = 0; i < 4; i++) {
             //se guarda cada persona nueva en un indice del vector
+           System.out.println("Persona: "+i);
             pp[i] = p.crearPersona(pe);
             String toString = pp[i].toString();
             System.out.println(toString);
-            /*if (p.esMayor(pp[i])==true) {
+            
+            if (p.esMayor(pp[i])==true) {
                 System.out.println("es mayor");
+                aux++;
             }else System.out.println("es menor");
-           */
+           if (p.calcularIMC(pp[i])==0) {
+                
+                aux2++;
+            }else if (p.calcularIMC(pp[i])==0){ 
+                
+            }
             p.calcularIMC(pp[i]);
+            
+            
         }
+           p.porcentajes(pp);
     }
 }
