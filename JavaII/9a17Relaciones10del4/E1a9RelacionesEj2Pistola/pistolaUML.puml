@@ -1,0 +1,13 @@
+@startuml
+class e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola
+class entidades.Juego o-- class entidades.revolverDeAgua
+class entidades.Jugador
+class entidades.RevolverDeAgua
+class java.util.ArrayList
+class java.util.Scanner
+e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola ..> entidades.Juego
+e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola ..> entidades.Jugador
+e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola ..> entidades.RevolverDeAgua
+e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola ..> java.util.ArrayList
+e1a9relacionesej2pistola.E1a9RelacionesEj2Pistola ..> java.util.Scanner
+@enduml
